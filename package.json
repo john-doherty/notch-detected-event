@@ -16,9 +16,7 @@
     "url": "https://github.com/john-doherty/notch-detected-event/issues"
   },
   "keywords": [
-    "swipe",
-    "touch",
-    "swiped events"
+    "notch"
   ],
   "author": "John Doherty <contact@johndoherty.info> (www.johndoherty.info)",
   "license": "MIT",
