@@ -1,0 +1,30 @@
+<!doctype>
+<html _data-has-notch="true">
+    <head>
+        <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1,maximum-scale=1" />
+        <title>notch-detected-event demo</title>
+        <script src="src/notch-detected-event.js"></script>
+        <style>
+            html[data-notch="true"]:before {
+                content: "Notch Detected";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 6px;
+                font-family: arial;
+                background: #f00;
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            window.addEventListener('notch-detected-event', function(e) {
+                console.log(e.type);
+                console.log(e.target);
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
