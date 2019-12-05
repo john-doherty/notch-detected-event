@@ -2,15 +2,13 @@
 
 [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/mrjohndoherty.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/mrjohndoherty)
 
-A 2k script that fires a `notch-detected` event if the device has a notch - currently iPhone X, XS, XR, XS Max and Google Pixel 3.
-
-If detected `data-notch="true"` and `data-orientation="portrait|landscape"` are added to the `<html>` element:
+A 2k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>. If detected `data-notch="true"` and `data-orientation="portrait|landscape"` will be added to the `<html>` element:
 
 ```html
 <html data-notch="true" data-orientation="portrait">
 ```
 
-This allows you to modify the UI using CSS. This script was inspired by SO thread [detecting mobile device “notch”](https://stackoverflow.com/questions/46318395/detecting-mobile-device-notch).
+This allows you to modify the UI at runtime using CSS, ideal for progressive web apps.
 
 ## Usage
 
@@ -68,7 +66,10 @@ npm run build
 
 ## Star the repo
 
-If you find this useful please star the repo - it helps me prioritize which open source issues I should tackle first.
+Star the repo if you find this as it helps me prioritize which open source bugs I should tackle first.
+
+This script was inspired by SO thread [detecting mobile device “notch”](https://stackoverflow.com/questions/46318395/detecting-mobile-device-notch).
+
 
 ## History
 
