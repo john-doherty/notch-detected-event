@@ -2,7 +2,7 @@
 
 [![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/mrjohndoherty.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/mrjohndoherty)
 
-A 2k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>. If detected `data-notch="true"` and `data-orientation="portrait|landscape"` will be added to the `<html>` element:
+A 0.7k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>. If detected `data-notch="true"` and `data-orientation="portrait|landscape"` will be added to the `<html>` element:
 
 ```html
 <html data-notch="true" data-orientation="portrait">
@@ -32,7 +32,7 @@ html[data-notch][data-orientation="landscape"] body {
 Or listen for the event and execute some logic:
 
 ```js
-window.addEventListener('mobile-notch-detected', function(e) {
+window.addEventListener('notch-detected', function(e) {
   console.log("Notch detected, move shit around");
 });
 ```
