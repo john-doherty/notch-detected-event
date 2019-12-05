@@ -1,7 +1,7 @@
 /*!
- * mobile-notch-detection.js - v@version@
+ * notch-detected-event.js - v@version@
  * A cross-browser script to detect the existence of a device notch/cutout
- * https://github.com/john-doherty/mobile-notch-detection
+ * https://github.com/john-doherty/notch-detected-event
  * @inspiration https://stackoverflow.com/questions/46318395/detecting-mobile-device-notch
  * @author John Doherty <www.johndoherty.info>
  * @license MIT
