@@ -68,8 +68,8 @@
             // set <html data-notch="true"> to allow CSS to tweak the display
             root.setAttribute('data-notch', 'true');
 
-            // fire global notch-detected-event event to let the UI know that happened
-            window.dispatchEvent(new CustomEvent('notch-detected-event', { bubbles: true, cancelable: true }));
+            // fire global notch-detected event to let the UI know that happened
+            window.dispatchEvent(new CustomEvent('notch-detected', { bubbles: true, cancelable: true }));
 
             // listen for resize events so we can update data-orientation
             window.addEventListener('resize', updateOrientationAttribute);
