@@ -1,41 +1,41 @@
 # notch-detected-event
 
-[![Linked In](https://img.shields.io/badge/Linked-In-blue.svg)](https://www.linkedin.com/in/john-i-doherty) [![Twitter Follow](https://img.shields.io/twitter/follow/mrjohndoherty.svg?style=social&label=Twitter&style=plastic)](https://twitter.com/mrjohndoherty)
+A 0.7k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>.
 
-A 0.7k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>. If detected `data-notch="true"` and `data-orientation="portrait|landscape"` will be added to the `<html>` element:
+If detected [HTML5 data attributes](http://html5doctor.com/html5-custom-data-attributes/) will be added to the `<html>` element:
 
 ```html
 <html data-notch="true" data-orientation="portrait">
 ```
 
-This allows you to modify the UI at runtime using CSS, ideal for progressive web apps.
-
-## Usage
-
-Add [notch-detected-event.min.js](dist/notch-detected-event.min.js) to your page and update your CSS:
+Allows you to modify the UI at runtime using CSS:
 
 ```css
 /* make room for the notch at the top */
-html[data-notch][data-orientation="portrait"] body {
+html[data-notch="true"][data-orientation="portrait"] body {
   padding-top: 44px;
   height: calc(100% - 44px);
 }
 
 /* make room for the notch at the sides */
-html[data-notch][data-orientation="landscape"] body {
+html[data-notch="true"][data-orientation="landscape"] body {
   padding-left: 44px;
   padding-right: 44px;
   width: calc(100% - 44px - 44px);
 }
 ```
 
-Or listen for the event and execute some logic:
+Or listen for the **notch-detected** event and execute some logic:
 
 ```js
 window.addEventListener('notch-detected', function(e) {
   console.log("Notch detected, move shit around");
 });
 ```
+
+## Install
+
+Add [notch-detected-event.min.js](dist/notch-detected-event.min.js) to your app/page.
 
 ## Contributing
 
@@ -66,10 +66,7 @@ npm run build
 
 ## Star the repo
 
-Star the repo if you find this as it helps me prioritize which open source bugs I should tackle first.
-
-This script was inspired by SO thread [detecting mobile device “notch”](https://stackoverflow.com/questions/46318395/detecting-mobile-device-notch).
-
+If you find this useful, please star the repo as it helps me prioritize open source bug fixes.
 
 ## History
 
