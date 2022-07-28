@@ -1,8 +1,6 @@
 # notch-detected-event
 
-A 0.7k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>.
-
-If detected [HTML5 data attributes](http://html5doctor.com/html5-custom-data-attributes/) will be added to the `<html>` element:
+A 0.7k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>. If detected a [HTML5 data attribute](http://html5doctor.com/html5-custom-data-attributes/) will be added to the `<html>` element:
 
 ```html
 <html data-notch="true">
