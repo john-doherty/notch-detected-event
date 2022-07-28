@@ -13,19 +13,19 @@ Allows you to modify the UI at runtime using CSS:
 ```css
 /* make room for the notch at the top */
 @media screen and (orientation: portrait) {
-	html[data-notch="true"] {
+  html[data-notch="true"] {
     padding-top: 44px;
     height: calc(100% - 44px);
-	}
+  }
 }
 
 /* make room for the notch at the sides */
 @media screen and (orientation: landscape) {
-	html[data-notch="true"] {
+  html[data-notch="true"] {
     padding-left: 44px;
     padding-right: 44px;
     width: calc(100% - 44px - 44px);
-	}
+  }
 }
 ```
 
