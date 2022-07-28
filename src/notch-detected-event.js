@@ -44,18 +44,18 @@
             // only if we have a notch
             if (hasNotch) {
 
-                // remove CSS variables
-                root.style.removeProperty('--notch-top');
-                root.style.removeProperty('--notch-right');
-                root.style.removeProperty('--notch-bottom');
-                root.style.removeProperty('--notch-left');
-
                 // set <html data-notch="true"> to allow CSS to tweak the display
                 root.setAttribute('data-notch', 'true');
 
                 // fire global notch-detected event to let the UI know that happened
                 window.dispatchEvent(new CustomEvent('notch-detected', { bubbles: true, cancelable: true }));
             }
+
+            // remove CSS variables
+            root.style.removeProperty('--notch-top');
+            root.style.removeProperty('--notch-right');
+            root.style.removeProperty('--notch-bottom');
+            root.style.removeProperty('--notch-left');
         }, 250);
     });
 
