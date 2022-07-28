@@ -5,23 +5,27 @@ A 0.7k script that fires a `notch-detected` event if the device has a notch <i>(
 If detected [HTML5 data attributes](http://html5doctor.com/html5-custom-data-attributes/) will be added to the `<html>` element:
 
 ```html
-<html data-notch="true" data-orientation="portrait">
+<html data-notch="true">
 ```
 
 Allows you to modify the UI at runtime using CSS:
 
 ```css
 /* make room for the notch at the top */
-html[data-notch="true"][data-orientation="portrait"] body {
-  padding-top: 44px;
-  height: calc(100% - 44px);
+@media screen and (orientation: portrait) {
+	html[data-notch="true"] {
+    padding-top: 44px;
+    height: calc(100% - 44px);
+	}
 }
 
 /* make room for the notch at the sides */
-html[data-notch="true"][data-orientation="landscape"] body {
-  padding-left: 44px;
-  padding-right: 44px;
-  width: calc(100% - 44px - 44px);
+@media screen and (orientation: landscape) {
+	html[data-notch="true"] {
+    padding-left: 44px;
+    padding-right: 44px;
+    width: calc(100% - 44px - 44px);
+	}
 }
 ```
 
