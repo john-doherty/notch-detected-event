@@ -7,15 +7,34 @@
  * @license MIT
  */
 (function (window, document) {
-
     'use strict';
 
-    // only execute this once the document has loaded (this might need to change!)
-    window.addEventListener('load', function() {
+    // check if the app is running in a Cordova environment
+    if (window.cordova) {
+        document.addEventListener('deviceready', function() {
+            checkForNotch(1000); // 1 sec
+        });
+    }
+    else {
+        // if not in Cordova, use the browser's 'load' event
+        window.addEventListener('load', function() {
+            checkForNotch(1000); // 1 sec
+        });
+    }
+
+    window.addEventListener('orientationchange', function() {
+        checkForNotch(0); // 0 sec
+    });
+
+    document.addEventListener('resume', function() {
+        checkForNotch(0); // 0 sec
+    });
+
+    // main function to detect the presence of a notch
+    function checkForNotch(timeout) {
 
         // we need to wait before executing to allow layout to happen
         setTimeout(function() {
-
             // get the <html> element
             var root = document.documentElement;
 
@@ -56,8 +75,8 @@
             root.style.removeProperty('--notch-right');
             root.style.removeProperty('--notch-bottom');
             root.style.removeProperty('--notch-left');
-        }, 250);
-    });
+        }, timeout);
+    }
 
     // patch CustomEvent to allow constructor creation (IE/Chrome)
     if (typeof window.CustomEvent !== 'function') {
