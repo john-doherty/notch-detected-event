@@ -14,6 +14,9 @@
         document.addEventListener('deviceready', function() {
             checkForNotch(1000); // 1 sec
         });
+        document.addEventListener('resume', function() {
+            checkForNotch(0); // 0 sec
+        });
     }
     else {
         // if not in Cordova, use the browser's 'load' event
@@ -21,6 +24,10 @@
             checkForNotch(1000); // 1 sec
         });
     }
+    window.addEventListener('orientationchange', function() {
+        checkForNotch(0); // 0 sec
+    });
+
 
     // main function to detect the presence of a notch
     function checkForNotch(timeout) {
