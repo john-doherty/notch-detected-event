@@ -12,13 +12,13 @@
     // check if the app is running in a Cordova environment
     if (window.cordova) {
         document.addEventListener('deviceready', function() {
-            checkForNotch(250);
+            checkForNotch(1000); // 1 sec
         });
     }
     else {
         // if not in Cordova, use the browser's 'load' event
         window.addEventListener('load', function() {
-            checkForNotch(250);
+            checkForNotch(1000); // 1 sec
         });
     }
 
