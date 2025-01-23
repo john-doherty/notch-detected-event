@@ -1,11 +1,9 @@
 # notch-detected-event
 
-A 0.7k script that fires a `notch-detected` event or `dynamic-island-detected` if the device has a notch or a dynamic island. If detected a [HTML5 data attribute](http://html5doctor.com/html5-custom-data-attributes/) will be added to the `<html>` element:
+A 0.7k script that fires a `notch-detected` event if the device has a notch <i>(currently iPhone X, XS, XR, XS Max and Google Pixel 3)</i>. If detected a [HTML5 data attribute](http://html5doctor.com/html5-custom-data-attributes/) will be added to the `<html>` element:
 
 ```html
 <html data-notch="true">
-  or
-<html data-dynamic-island="true">
 ```
 
 Allows you to modify the UI at runtime using CSS:
@@ -27,25 +25,12 @@ Allows you to modify the UI at runtime using CSS:
     width: calc(100% - 44px - 44px);
   }
 }
-
-/* example: make room for the dynamic island */
-@media screen and (orientation: landscape) {
-  html[data-dynamic-island="true"] {
-    padding-left: 44px;
-    padding-right: 44px;
-    width: calc(100% - 44px - 44px);
-  }
-}
 ```
 
-Or listen for the **notch-detected** or **dynamic-island-detected** event and execute some logic:
+Or listen for the **notch-detected** event and execute some logic:
 
 ```js
 window.addEventListener('notch-detected', function(e) {
-  console.log("Notch detected, move shit around");
-});
-
-window.addEventListener('dynamic-island-detected', function(e) {
   console.log("Notch detected, move shit around");
 });
 ```
