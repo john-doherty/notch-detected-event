@@ -3,7 +3,7 @@
  * A cross-browser script to detect the existence of a device notch/cutout
  * https://github.com/orca-scan/notch-detected-event
  * @inspiration https://stackoverflow.com/questions/46318395/detecting-mobile-device-notch
- * @author John Doherty <www.johndoherty.info>
+ * @author Orca Scan <orcascan.com>
  * @license MIT
  */
 (function (window, document) {

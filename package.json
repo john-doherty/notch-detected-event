@@ -18,7 +18,7 @@
   "keywords": [
     "notch"
   ],
-  "author": "John Doherty <contact@johndoherty.info> (www.johndoherty.info)",
+  "author": "Orca Scan <hello@orcascan.com>",
   "license": "MIT",
   "devDependencies": {
     "del": "2.2.2",
