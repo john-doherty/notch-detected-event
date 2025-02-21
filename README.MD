@@ -52,7 +52,7 @@ Add [notch-detected-event.min.js](dist/notch-detected-event.min.js) to your app/
 The project includes everything needed to develop/test. Run the following then visit [http://your-local-ip:8080](http://localhost:8080) on your mobile device or emulator.
 
 ```bash
-git clone https://github.com/john-doherty/notch-detected-event
+git clone https://github.com/orca-scan/notch-detected-event
 cd notch-detected-event
 npm install
 npm start
@@ -68,12 +68,8 @@ npm run build
 
 ## Star the repo
 
-If you find this useful, please star the repo as it helps me prioritize open source bug fixes.
-
-## History
-
-For change-log, check [releases](https://github.com/john-doherty/notch-detected-event/releases).
+Find this useful? Star the repo - it help us priorities open source tasks 🌟
 
 ## License
 
-Licensed under [MIT License](LICENSE) &copy; [John Doherty](http://www.johndoherty.info)
+[MIT License](LICENSE) © Orca Scan - a [barcode app](https://orcascan.com) with simple [barcode tracking APIs](https://orcascan.com/guides?tag=for-developers).

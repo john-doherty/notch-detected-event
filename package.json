@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/john-doherty/notch-detected-event.git"
+    "url": "git+https://github.com/orca-scan/notch-detected-event.git"
   },
   "bugs": {
-    "url": "https://github.com/john-doherty/notch-detected-event/issues"
+    "url": "https://github.com/orca-scan/notch-detected-event/issues"
   },
   "keywords": [
     "notch"
